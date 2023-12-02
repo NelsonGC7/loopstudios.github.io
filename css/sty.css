@@ -288,6 +288,9 @@
 }
 .caja{
     background-color: black;
+    p{
+        color: aliceblue;
+    }
 }
 
 
