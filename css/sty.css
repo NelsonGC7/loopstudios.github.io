@@ -14,6 +14,7 @@
     --josefinSans:'Josefin Sans', sans-serif;
 }
 
+
 .header{
     width: 375px;
     height: 700px;
@@ -24,6 +25,7 @@
     background-repeat: no-repeat;
     padding: 25px;
     position: relative;
+   
     display: flex;
     align-items: start;
     margin: 0 auto;
@@ -36,10 +38,8 @@
 .header-nav-active{
     z-index: 2;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    height: 1000px;
-   
     height: 100%;
     width: 100%;
     background-color:var(--Black);
@@ -48,8 +48,8 @@
     flex-direction: column;
     justify-content: center ;
     overflow: hidden;
-   
-    
+    animation-name:movimiento;
+    animation-duration: 2s;
     .header-nav--click{
         padding-top: 5rem;
         display: flex;
@@ -68,6 +68,18 @@
     }
 
 
+}
+
+@keyframes movimiento {
+   0%{
+    
+    
+   }
+    100%{
+        width: 100%;
+
+    }
+    
 }
 .header img{
     width: 150px;
@@ -291,6 +303,36 @@
     p{
         color: aliceblue;
     }
+}
+
+@media (min-width:800px) {
+    .header{
+        width: 100%;
+        background-image: url(/images/desktop/image-hero.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        padding: 5.5rem 10%;
+    }
+    #burger{
+        display: none;
+    }
+    .header-nav{
+        display: inline;
+        a{
+            color: white;
+            text-decoration: none;
+            font-family: var(--alataFont);
+            margin-right: 0.5rem;
+        }
+        a:last-child{
+            margin-right:0;
+        }
+
+    }
+    
+    
 }
 
 
