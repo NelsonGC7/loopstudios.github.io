@@ -14,6 +14,10 @@
     --josefinSans:'Josefin Sans', sans-serif;
 }
 
+body{
+height: auto;
+
+}
 
 .header{
     width: 375px;
@@ -295,6 +299,7 @@
 }
 
 @media (min-width:800px) {
+    
     .header{
         width: 100%;
         background-image: url(/images/desktop/image-hero.jpg);
@@ -358,13 +363,14 @@
         position: relative;
         margin: 0;
         height: 600px;
-       
         width: 100%;
-        padding: 5.5rem 10%;
+        padding: 5rem 10%;
+        
         img{
              display: none;
         }
         display: flex;
+        margin-top: 3rem;
     }
     .leaderImg{
         width:60% ;
@@ -382,7 +388,7 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        margin-bottom: 5.5rem;
+        margin-bottom: 5rem;
         margin-right: 10%;
         z-index: 1;
         padding: 4rem 0 0 4rem;
@@ -390,16 +396,119 @@
             margin: 0;
             font-size: 58px;
             text-align: left;
+            font-weight: 400;
         }
         p{
             margin-top: 0;
             text-align: left;
+            font-size: large;
         }
 
        
         
     }    
+    .cardContein{
+        position: relative;
+        width: 100%;
+        height:auto;
+        padding: 0 10%;
+        margin-top: 4rem;  
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        grid-template-rows: auto  1fr 1fr; 
+        grid-template-areas: 
+        " txbt  txbt txbt txbt"
+        " img1  img2 img3 img4"
+        " img5  img6 img7 img8"
+        
+        ;
     
+    
+    }
+    .cardContein .ttleBton{
+        grid-area: txbt;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        h3{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        
+    }
+    .cardContein button{
+        position: absolute;
+        top: 0;
+        right: 10%;
+    
+    
+    
+    }
+    .btongrid{
+        z-index: 3;
+     
+       
+        height: 2.5rem !important;
+        width:7rem !important;
+        cursor: pointer;
+        
+
+    }
+    .cards{
+    
+        height: 450px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        padding: 0;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        p{  
+            
+            width: 60%;
+            position: relative;
+            font-family: var(--josefinSans);
+            color:var(--White);
+            text-transform: uppercase;
+            font-size: xx-large;
+            font-weight: 400;
+            word-wrap: break-word;
+           
+        
+        }
+    
+    
+    }
+    .card-1{
+        background-image: url('/images/desktop/image-deep-earth.jpg');
+       
+    }
+    .card-2{
+        background-image: url('/images/desktop/image-night-arcade.jpg');
+    }
+    .card-3{
+        background-image: url('/images/desktop/image-soccer-team.jpg');
+    }
+    .card-4{
+        background-image: url('/images/desktop/image-grid.jpg');
+    }
+    .card-5{
+        background-image: url('/images/desktop/image-from-above.jpg');
+       
+    }
+    .card-6{
+        background-image: url('/images/desktop/image-pocket-borealis.jpg');
+    }
+    .card-7{
+        background-image: url('/images/desktop/image-curiosity.jpg');
+    }
+    .card-8{
+        background-image: url('/images/desktop/image-fisheye.jpg');
+        margin-bottom: 0;
+        
+        
+    }
     
 }
 
