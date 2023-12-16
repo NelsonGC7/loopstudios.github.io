@@ -14,11 +14,16 @@
     --josefinSans:'Josefin Sans', sans-serif;
 }
 
+body{
+height: auto;
+
+}
+
 .header{
     width: 375px;
     height: 700px;
     background-color: beige;
-    background-image: url(/images/mobile/image-hero.jpg);
+    background-image: url(../images/mobile/image-hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,10 +41,8 @@
 .header-nav-active{
     z-index: 2;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    height: 1000px;
-   
     height: 100%;
     width: 100%;
     background-color:var(--Black);
@@ -48,8 +51,6 @@
     flex-direction: column;
     justify-content: center ;
     overflow: hidden;
-   
-    
     .header-nav--click{
         padding-top: 5rem;
         display: flex;
@@ -69,6 +70,7 @@
 
 
 }
+
 .header img{
     width: 150px;
     z-index: 3;
@@ -92,7 +94,10 @@
 .header--tex{
     color: white;
     position: absolute;
-    inset: 0;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
     margin: auto;
     height: 200px;
     width: 335px;
@@ -214,30 +219,30 @@
 
 }
 .card-1{
-    background-image: url('/images/mobile/image-deep-earth.jpg');
+    background-image: url('../images/mobile/image-deep-earth.jpg');
    
 }
 .card-2{
-    background-image: url('/images/mobile/image-night-arcade.jpg');
+    background-image: url('../images/mobile/image-night-arcade.jpg');
 }
 .card-3{
-    background-image: url('/images/mobile/image-soccer-team.jpg');
+    background-image: url('../images/mobile/image-soccer-team.jpg');
 }
 .card-4{
-    background-image: url('/images/mobile/image-grid.jpg');
+    background-image: url('../images/mobile/image-grid.jpg');
 }
 .card-5{
-    background-image: url('/images/mobile/image-from-above.jpg');
+    background-image: url('../images/mobile/image-from-above.jpg');
    
 }
 .card-6{
-    background-image: url('/images/mobile/image-pocket-borealis.jpg');
+    background-image: url('../images/mobile/image-pocket-borealis.jpg');
 }
 .card-7{
-    background-image: url('/images/mobile/image-curiosity.jpg');
+    background-image: url('../images/mobile/image-curiosity.jpg');
 }
 .card-8{
-    background-image: url('/images/mobile/image-fisheye.jpg');
+    background-image: url('../images/mobile/image-fisheye.jpg');
     margin-bottom: 16px;
 }
 .footer{
@@ -291,6 +296,255 @@
     p{
         color: aliceblue;
     }
+}
+
+@media (min-width:800px) {
+    
+    .header{
+        width: 100%;
+        background-image: url(../images/desktop/image-hero.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 5.5rem 10%;
+    }
+    
+    #burger{
+        display: none;
+    }
+    .header-nav{
+        display: inline;
+        a{
+            color: white;
+            text-decoration: none;
+            font-family: var(--alataFont);
+            margin-right: 0.5rem;
+        }
+        a:last-child{
+            margin-right:0;
+        }
+
+    }
+    .box{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        max-width: 900px;
+
+    }
+    .header--tex{
+        position: absolute;
+        margin-left: 0;
+        margin-bottom: 5rem;
+        width: 75%;
+        height: 60%;
+        display: flex;
+        
+       
+
+        p{
+            font-size: 60px;
+            line-height: 75px;
+            word-wrap: break-word;
+            margin: 0;
+            padding: 0;
+            padding-top: 2.5rem;
+        }
+        
+    }
+    .boxx{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;  
+    }
+
+    .leader{
+        position: relative;
+        margin: 0;
+        height: 600px;
+        width: 100%;
+        padding: 5rem 10%;
+        
+        img{
+             display: none;
+        }
+        display: flex;
+        margin-top: 3rem;
+    }
+    .leaderImg{
+        width:60% ;
+        height: 100%;
+        background-image: url(../images/desktop/image-interactive.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        z-index: 1;
+
+    }
+    .leader .leader-text {
+      background-color: var(--White);
+        width: 600px;
+        height: 315px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 5rem;
+        margin-right: 10%;
+        z-index: 1;
+        padding: 4rem 0 0 4rem;
+        h1{
+            margin: 0;
+            font-size: 58px;
+            text-align: left;
+            font-weight: 400;
+        }
+        p{
+            margin-top: 0;
+            text-align: left;
+            font-size: large;
+        }
+
+       
+        
+    }    
+    .cardContein{
+        position: relative;
+        width: 100%;
+        height:auto;
+        padding: 0 10%;
+        margin-top: 4rem; 
+        padding-bottom: 10rem;
+        display: grid;
+        grid-template-columns: repeat(4,1fr); 
+        grid-template-rows: auto  1fr 1fr; 
+        grid-template-areas: 
+        " txbt  txbt txbt txbt"
+        " img1  img2 img3 img4"
+        " img5  img6 img7 img8"
+        
+        ;
+    
+    
+    }
+    .cardContein .ttleBton{
+        grid-area: txbt;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        h3{
+            text-align: left;
+            margin-bottom: 0;
+        }
+        
+    }
+    .cardContein button{
+        position: absolute;
+        top: 0;
+        right: 10%;
+    
+    
+    
+    }
+    .btongrid{
+        z-index: 3;
+     
+       
+        height: 2.5rem !important;
+        width:7rem !important;
+        cursor: pointer;
+        
+
+    }
+    .cards{
+        border-radius: 5px;
+    
+        height: 450px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        padding: 0;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        p{  
+            
+            width: 60%;
+            position: relative;
+            font-family: var(--josefinSans);
+            color:var(--White);
+            text-transform: uppercase;
+            font-size: xx-large;
+            font-weight: 400;
+            word-wrap: break-word;
+           
+        
+        }
+    
+    
+    }
+    .card-1{
+        background-image: url('../images/desktop/image-deep-earth.jpg');
+       
+    }
+    .card-2{
+        background-image: url('../images/desktop/image-night-arcade.jpg');
+    }
+    .card-3{
+        background-image: url('../images/desktop/image-soccer-team.jpg');
+    }
+    .card-4{
+        background-image: url('../images/desktop/image-grid.jpg');
+    }
+    .card-5{
+        background-image: url('../images/desktop/image-from-above.jpg');
+       
+    }
+    .card-6{
+        background-image: url('../images/desktop/image-pocket-borealis.jpg');
+    }
+    .card-7{
+        background-image: url('../images/desktop/image-curiosity.jpg');
+    }
+    .card-8{
+        background-image: url('../images/desktop/image-fisheye.jpg');
+        margin-bottom: 0;
+        
+        
+    }
+    .footer{
+    
+        width: 100%;
+        height: 200px;
+        flex-direction: row;
+        padding:  0 10%;
+    }
+    .footerContein{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        gap: 25px;
+       
+    }
+    .footerContein img{
+        align-self: first baseline;
+    
+    
+    }
+    .fotext{
+        display: flex;
+        gap: 25px;
+    }
+    .footerSocial{
+        margin: 0;
+        gap: 25px;    
+    
+    }
+    .ffsocial{
+     align-self: last baseline;
+    }
+    
 }
 
 
