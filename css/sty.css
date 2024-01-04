@@ -20,7 +20,7 @@ height: auto;
 }
 
 .header{
-    width: 375px;
+    max-width: 500px;
     height: 700px;
     background-color: beige;
     background-image: url(../images/mobile/image-hero.jpg);
@@ -247,7 +247,7 @@ height: auto;
 }
 .footer{
     height: 400px;
-    width: 375px;
+    max-width: 500px;
     margin: 0 auto;
     background-color: var(--Black);
     color: var(--White);
