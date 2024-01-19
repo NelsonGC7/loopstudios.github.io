@@ -15,12 +15,12 @@
 }
 
 body{
-height: auto;
+    height: auto;
 
 }
 
 .header{
-    width: 375px;
+    max-width:750px;
     height: 700px;
     background-color: beige;
     background-image: url(../images/mobile/image-hero.jpg);
@@ -72,12 +72,12 @@ height: auto;
 }
 
 .header img{
-    width: 150px;
+    width: 180px;
     z-index: 3;
 }
 .header img + img{
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     position: absolute;
     right: 25px;
     
@@ -100,7 +100,7 @@ height: auto;
    right: 0;
     margin: auto;
     height: 200px;
-    width: 335px;
+    width: 375px;
     border: solid 2px white;
     display: flex;
     justify-content: center;
@@ -129,8 +129,8 @@ height: auto;
 }
 .leader img{
     display: block;
-    height: 230px;
-    width: 335px;
+    height: 240px;
+    width: 375px;
     margin: 0 auto;
     
     
@@ -143,6 +143,7 @@ height: auto;
 }
 .leader h1{
     font-family: var(--josefinSans);
+    font-size: 35px;
    text-transform: uppercase;
     text-align: center;
     font-weight: 400;
@@ -151,10 +152,12 @@ height: auto;
 .leader p{
     font-family: var(--josefinSans);
     color:var(--Dark-Gray);
+    font-size: 20px;
     font-weight:600;
     margin-top: 1.5rem;
     text-align: center;
     line-height: 26px;
+    text-wrap: balance;
 }
 
 .cardContein{
@@ -171,20 +174,21 @@ height: auto;
         text-transform: uppercase;
         font-weight: 400;
         text-align: center;
-        font-size: xx-large;
+        font-size: 38px;
         margin-bottom: 30px;
         
     }
    
 }
 .cardContein button{
-    height: 35px;
+    height: 60px;
     width: 40%;
     border:solid 2px var(--Black) ;
     background: transparent;
     text-transform: uppercase;
-   letter-spacing: 5px;
-   font-family: var(--josefinSans);
+    letter-spacing: 5px;
+    font-family: var(--josefinSans);
+    font-size: large;
    
 
 }
@@ -192,8 +196,8 @@ height: auto;
     cursor: pointer;
 }
 .cards{
-    width: 335px;
-    height: 120px;
+    width: 375px;
+    min-height: 150px;
     background-color: beige;
         background-size: cover;
         background-position: center;
@@ -247,11 +251,11 @@ height: auto;
 }
 .footer{
     height: 400px;
-    width: 375px;
+    max-width: 750px;
     margin: 0 auto;
     background-color: var(--Black);
     color: var(--White);
-    padding: 50px  30px;
+    padding: 30px  30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,11 +273,13 @@ height: auto;
 .footerContein{
     height: 350px;
     display: flex;
+    
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .footerSocial{
     display: flex;
+    font-size: 20px;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
@@ -282,13 +288,25 @@ height: auto;
     p:hover{
         cursor: text;
     }
+    img{
+        width: 30px;
+    
+    }
     img:hover{
         cursor: pointer;
+        
     }
 }
+.fotext{
+    gap: 30px;
+    font-size: 25px;
+
+}
 .ffsocial{
-    width: 150px;
+    height: auto;
+    width: 200px;
     display: flex;
+    gap: 25px;
     justify-content: space-around;
 }
 .caja{
@@ -301,7 +319,7 @@ height: auto;
 @media (min-width:800px) {
     
     .header{
-        width: 100%;
+        max-width: 100%;
         background-image: url(../images/desktop/image-hero.jpg);
         background-position: center;
         background-size: cover;
@@ -319,7 +337,7 @@ height: auto;
             color: white;
             text-decoration: none;
             font-family: var(--alataFont);
-            margin-right: 0.5rem;
+            margin-right: 1.4rem;
         }
         a:last-child{
             margin-right:0;
@@ -514,7 +532,7 @@ height: auto;
     }
     .footer{
     
-        width: 100%;
+        max-width: 100%;
         height: 200px;
         flex-direction: row;
         padding:  0 10%;
